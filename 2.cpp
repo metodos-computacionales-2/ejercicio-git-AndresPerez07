@@ -22,7 +22,7 @@ for (int i = 0; i < 3; i++) {
   }
 
 }
-cout << "El numero mayor es: " << nums[ix] << endl;
+cout << "Hipotenusa: " << nums[ix] << endl;
 int h = nums[ix];
 int *cat = new int [2];
 int j=0;
@@ -37,8 +37,14 @@ while(j < 3)
   }
   j++;
 }
-cout << "catetos: " << cat[0] << ", " << cat[1] << endl;
-
+cout << "Catetos: " << cat[0] << ", " << cat[1] << endl;
+if((h^2) == (cat[0]^2 + cat[1]^2))
+{
+  cout << nums[0] << ", " <<nums[1]<< ", " << nums[2]<< " Pueden ser lados de un triangulo rectangulo"<<endl;
+}
+else{
+  cout << nums[0] << ", " <<nums[1]<< ", " << nums[2]<< " NO pueden ser lados de un triangulo rectangulo"<<endl;
+}
 
   return 0;
 }
